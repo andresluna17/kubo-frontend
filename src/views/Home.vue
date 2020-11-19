@@ -1,17 +1,41 @@
 <template>
-  <div class="home">
-     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+  <div>
+    <Navigation />
+    <PeliculaDataview v-bind:peliculas="peliculas" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+import Navigation from "../components/Navigation";
+import PeliculaDataview from "../components/PeliculaDataview";
+import axios from "axios";
+import { url } from "../constantes";
 export default {
-  name: 'Home',
-  components: {
-  }
-}
+  components: { Navigation, PeliculaDataview },
+  data() {
+    return {
+      peliculas: [],
+    };
+  },
+  created() {
+    let token = localStorage.getItem("token");
+
+    axios({
+      url: url + "/pelicula",
+      method: "get",
+      headers: {
+        authorization: token,
+      },
+    })
+      .then((res) => {
+        if (res.data.ok) {
+          console.log(res.data.peliculas);
+          this.peliculas = res.data.peliculas;
+        }
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  },
+};
 </script>
