@@ -20,7 +20,9 @@
           <router-link to="/Home" class="nav-link">Home</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/Home" class="nav-link">Home</router-link>
+          <router-link to="/crear-pelicula" class="nav-link"
+            >crear pelicula</router-link
+          >
         </li>
       </ul>
     </div>

@@ -7,6 +7,9 @@ import Toast from "primevue/toast";
 import InputSwitch from "primevue/inputswitch";
 import Rating from "primevue/rating";
 import ScrollPanel from "primevue/scrollpanel";
+import InputText from "primevue/inputtext";
+import Textarea from "primevue/textarea";
+import InputNumber from "primevue/inputnumber";
 import "primevue/resources/themes/saga-blue/theme.css";
 import "primevue/resources/primevue.min.css";
 import "primeicons/primeicons.css";
@@ -21,6 +24,9 @@ Vue.component("Toast", Toast);
 Vue.component("InputSwitch", InputSwitch);
 Vue.component("Rating", Rating);
 Vue.component("ScrollPanel", ScrollPanel);
+Vue.component("InputText", InputText);
+Vue.component("Textarea", Textarea);
+Vue.component("InputNumber", InputNumber);
 new Vue({
   router,
   render: (h) => h(App)
