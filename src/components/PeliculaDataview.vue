@@ -34,7 +34,7 @@
                 :alt="pelicula.data.titulo"
               />
               <div class="">Fecha de estreno: {{ pelicula.data.estreno }}</div>
-              <ScrollPanel style="width: 100%; height: 325px">
+              <ScrollPanel style="width: 100%; height: 360px">
                 <div class="">{{ pelicula.data.titulo }}</div>
                 <div class="">
                   {{ pelicula.data.descripcion }}

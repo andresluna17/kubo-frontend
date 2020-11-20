@@ -10,6 +10,9 @@ import ScrollPanel from "primevue/scrollpanel";
 import InputText from "primevue/inputtext";
 import Textarea from "primevue/textarea";
 import InputNumber from "primevue/inputnumber";
+import Calendar from "primevue/calendar";
+import MultiSelect from "primevue/multiselect";
+import Button from "primevue/button";
 import "primevue/resources/themes/saga-blue/theme.css";
 import "primevue/resources/primevue.min.css";
 import "primeicons/primeicons.css";
@@ -27,6 +30,9 @@ Vue.component("ScrollPanel", ScrollPanel);
 Vue.component("InputText", InputText);
 Vue.component("Textarea", Textarea);
 Vue.component("InputNumber", InputNumber);
+Vue.component("Calendar", Calendar);
+Vue.component("MultiSelect", MultiSelect);
+Vue.component("Button", Button);
 new Vue({
   router,
   render: (h) => h(App)
